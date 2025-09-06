@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Améliorer la riziculture à Madagascar grâce à l'IA | Chatbot LLM pour riziculteurs</title>
+    <meta name="description" content="Découvrez comment l'IA et les chatbots LLM transforment la riziculture à Madagascar. Données de production, graphiques interactifs et conseils personnalisés pour les riziculteurs malgaches.">
+    <link rel="icon" href="maitso.jpg">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Améliorer la riziculture à Madagascar grâce à l'IA">
+    <meta property="og:description" content="Le chatbot basé sur un LLM apporte des conseils personnalisés aux riziculteurs malgaches">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://riziculture-madagascar.com">
+    <meta property="og:image" content="https://riziculture-madagascar.com/images/og-image.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style/riziculture-styles.css">
+    
+    <!-- Data -->
+    <script src="include/data.js"></script>
+</head>
+<body class="font-inter bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-seedling text-green-600 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-gray-800">Deep Rice</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#accueil" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
+                        <a href="#donnees" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Données</a>
+                        <a href="#graphiques" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Graphiques</a>
+                        <a href="#faq" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">FAQ</a>
+                        <!-- <a href="pages/chat.php" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">New Chat</a> -->
+                        <a href="pages/chat.php">
+                        <button class="btn-primary bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                            <i class="fas fa-robot mr-2"></i>
+                           Fanontaniana?
+                        </button>
+                        </a>
+                    </div>
+                </div>
+                <button class="md:hidden">
+                    <i class="fas fa-bars text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="pt-16 hero-section min-h-screen flex items-center relative">
+        <!-- Particules flottantes -->
+        <div class="particles absolute inset-0 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-fade-in">
+                    Fanatsarana ny fambolena vary eto Madagasikara mampiasa
+                    <span class="gradient-text">AI</span>
+                </h1>
+                
+                <div class="max-w-4xl mx-auto mb-8">
+                    <p class="text-xl md:text-2xl text-gray-700 mb-4 animate-fade-in-delay">
+                        Le chatbot basé sur un LLM apporte des conseils personnalisés aux riziculteurs malgaches
+                    </p>
+                    <p class="text-lg md:text-xl text-gray-600 italic animate-fade-in-delay-2">
+                        Ny chatbot LLM manampy amin'ny fanatsarana ny vokatra vary eto Madagasikara
+                    </p>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button id="cta-button" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg animate-bounce-in">
+                        <i class="fas fa-chart-line mr-2"></i>
+                        Découvrir les données
+                    </button>
+                    <a href="pages/chat.php">
+                        <button class="bg-white hover:bg-gray-50 text-green-600 font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg border-2 border-green-600">
+                        
+                        <i class="fas fa-robot mr-2"></i>
+                        Essayer le chatbot
+                    </button>
+                </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Données Chiffrées -->
+    <section id="donnees" class="py-20 bg-white section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Data momba ny famokarana vary</h2>
+                <p class="text-xl text-gray-600">Tarehimarika manan-danja ho an'ny fambolena vary sy Malagasy manerantany</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Production Madagascar -->
+                <div class="data-card bg-gradient-to-br from-green-500 to-green-600 text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center">
+                       <br>
+                        <h3 class="text-xl font-semibold mb-2">Production Madagascar (2023/24)</h3>
+                        <div class="text-4xl font-bold mb-2" id="production-madagascar"> <i class="fas fa-flag text-4xl mb-4"></i></div>
+                        <p class="text-green-100">millions de tonnes</p>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Rendement Madagascar -->
+                <div class="data-card bg-gradient-to-br from-blue-500 to-blue-600 text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center">
+                        <br>
+                        <h3 class="text-xl font-semibold mb-2">Rendement Madagascar</h3>
+                        <div class="text-4xl font-bold mb-2" id="rendement-madagascar"><i class="fas fa-chart-bar text-4xl mb-4"></i></div>
+                        <p class="text-blue-100">tonnes par hectare</p>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Production Mondiale -->
+                <div class="data-card bg-gradient-to-br from-purple-500 to-purple-600 text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center">
+                       <br>
+                        <h3 class="text-xl font-semibold mb-2">Production Mondiale (2023/24)</h3>
+                        <div class="text-4xl font-bold mb-2" id="production-mondiale"><i class="fas fa-globe text-4xl mb-4"></i></div>
+                        <p class="text-purple-100">millions de tonnes</p>
+                    </div>
+                </div>
+                
+                <!-- Card 4: Production Chine -->
+                <div class="data-card bg-gradient-to-br from-red-500 to-red-600 text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center">
+                       <br>
+                        <h3 class="text-xl font-semibold mb-2">Production Chine (2022/23)</h3>
+                        <div class="text-4xl font-bold mb-2" id="production-chine"> <i class="fas fa-dragon text-4xl mb-4"></i></div>
+                        <p class="text-red-100">millions de tonnes</p>
+                    </div>
+                </div>
+                
+                <!-- Card 5: Projection FAO 2025 -->
+                <div class="data-card bg-gradient-to-br from-yellow-500 to-orange-500 text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center">
+                       <br>
+                        <h3 class="text-xl font-semibold mb-2">Projection FAO 2025</h3>
+                        <div class="text-4xl font-bold mb-2" id="projection-fao"> <i class="fas fa-crystal-ball text-4xl mb-4"></i></div>
+                        <p class="text-yellow-100">millions de tonnes</p>
+                    </div>
+                </div>
+                
+                <!-- Card 6: Comparaison -->
+                <div class="data-card bg-gradient-to-br from-indigo-500 to-indigo-600 text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="text-center">
+                       <br>
+                        <h3 class="text-xl font-semibold mb-2">Part de Madagascar</h3>
+                        <div class="text-4xl font-bold mb-2" id="part-madagascar"> >0,98%</div>
+                        <p class="text-indigo-100">% de la production mondiale</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Graphiques -->
+    <section id="graphiques" class="py-20 bg-gray-50 section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Analyses Visuelles</h2>
+                <p class="text-xl text-gray-600">Graphiques interactifs et cartographie des zones rizicoles</p>
+            
+            <!-- Graphiques Row 1 -->
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Bar Chart Comparatif -->
+                <div class="chart-container bg-white  rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Comparaison de Production</h3>
+                    <div class="relative h-50">
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Line Chart Évolution -->
+                <div class="chart-container bg-white rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Évolution Mondiale (2023-2025)</h3>
+                    <div class="relative h-50">
+                        <canvas id="barChart"></canvas>                 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Explicative -->
+    <section class="py-20 bg-white section">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Ny maha-zava-dehibe ny fanavaozana nomerika</h2>
+                <div class="prose prose-lg mx-auto text-gray-700 leading-relaxed">
+                    <p class="mb-6">
+                        Madagasikara, miaraka amin'ny famokarana vary 5.12 tapitrisa taonina tamin'ny 2023/24, dia maneho ny latsaky ny 1% amin'ny famokarana eran-tany (523.8 tapitrisa taonina). Ny mifanohitra amin'izany dia manaitra an'i Shina, izay mamokatra 208,5 tapitrisa taonina, na saika 40% amin'ny fitambaran'izao tontolo izao.
+
+                    </p>
+                    <p class="mb-6">
+                        Ity tsy fitovian-kevitra ity dia hazavaina amin'ny ampahany amin'ny salan'isa 3.05 t / ha eto Madagasikara, ambanin'ny fenitra iraisam-pirenena. 
+                        Miatrika io fanamby io, ny faharanitan-tsaina voajanahary sy ny chatbots LLM dia manome fotoana tsy manam-paharoa mba hamongorana ny fidirana amin'ny torohevitra agronomika manokana.
+                    </p>
+                    <p>
+                        Ireo fitaovana nomerika ireo dia mamela ny tantsaha vary malagasy handray tolo-kevitra mifanaraka amin'ny toe-javatra misy azy ireo eo an-toerana 
+                        noho izany dia manampy amin'ny fanakatonana ny hantsana vokatra ary hanatsara ny fiarovana ny sakafo ao amin'ny nosy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section FAQ -->
+    <section id="faq" class="py-20 bg-gray-50 section">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Fanontaniana matetika</h2>
+                <p class="text-xl text-gray-600">valiny amin'ireo fanontaniana iraisana momba ny chatbot IA</p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-lg shadow-md">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <span class="text-lg font-semibold text-gray-800"> Moa ve ny chatbot manolo ny agronomist?</span>
+                        <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-700">
+                            Tsia, ny chatbot dia tsy manolo ny agronomist fa mameno azy. Manome torohevitra fototra 24 ora isan'andro izy ary afaka manondro anao amin'ny matihanina 
+                            ho an'ny toe-javatra sarotra izay mitaky ny fahaizan'ny olombelona lalina.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-lg shadow-md">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <span class="text-lg font-semibold text-gray-800">Ahoana no havaozina ny données ?</span>
+                        <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-700">
+                            Le données dia havaozina isan'andro amin'ny alàlan'ny governemanta sy ny API iraisam-pirenena (FAO, USDA). 
+                            Ny rafitra ataontsika dia mampifanaraka ny fampahalalana farany momba ny toetr'andro, ny vidin'ny fidirana ary ny tolo-kevitra agronomika.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-lg shadow-md">
+                    <button class="faq-question w-full text-left p-6 flex justify-between items-center hover:bg-gray-50 transition-colors">
+                        <span class="text-lg font-semibold text-gray-800">Miasa ve ny serivisy ra toa ka tsy misy conexions?
+
+                        </span>
+                        <i class="fas fa-chevron-down faq-icon transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden p-6 pt-0">
+                        <p class="text-gray-700">
+                            Eny, ny fampiharana finday dia miasa an-tserasera ho an'ny fiasa fototra. 
+                            Ny torohevitra mialoha sy ny tantaran'ny plots anao dia mijanona ho azo idirana na dia tsy misy fifandraisana Internet aza.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-seedling text-green-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">Deep Rice</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        Fanatsarana ny fambolena vary eto Madagasikara mampiasa 
+                        <span class="gradient-text">AI</span>
+
+                    </p>
+                    <a href="pages/chat.php">
+                    <button class="btn-primary bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                        <i class="fas fa-robot mr-2"></i>
+                        Essayer le chatbot
+                    </button>
+                </a>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Sources de Données</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>• USDA FAS (IPAD, 2023/24)</li>
+                        <li>• FAO (Projections 2025)</li>
+                        <li>• Ministère de l'Agriculture Madagascar</li>
+                        <li>• FOFI Madagascar</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Informations</h3>
+                    <p class="text-gray-400 mb-2">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Données mises à jour le 07 septembre 2025
+                    </p>
+                    <p class="text-gray-400">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Tantsaha@deep-rice-madagascar.com
+                    </p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Deep Rice Madagascar. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="riziculture-script.js"></script>
+</body>
+</html>

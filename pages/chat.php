@@ -178,6 +178,9 @@
         .text-purple-600 {
             color: #7c3aed !important;
         }
+        .text-white {
+            color: #ffffffff !important;
+        }
     </style>
 </head>
 <body class="min-h-screen w-full">

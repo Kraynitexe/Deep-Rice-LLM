@@ -164,7 +164,7 @@ function addUserMessage(message) {
     
     messageDiv.innerHTML = `
         <div class="bg-green-600 text-white rounded-lg p-4 max-w-xs">
-            <p class="text-sm">${escapeHtml(message)}</p>
+            <p class="text-sm text-white">${escapeHtml(message)}</p>
             <span class="text-xs text-green-100 mt-1 block">Maintenant</span>
         </div>
         <div class="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center flex-shrink-0">
@@ -188,8 +188,8 @@ function addBotMessage(message) {
             <i class="fas fa-robot text-white text-sm"></i>
         </div>
         <div class="bg-white rounded-lg p-4 shadow-sm max-w-xs">
-            <p class="text-gray-800 text-sm">${escapeHtml(message)}</p>
-            <span class="text-xs text-gray-500 mt-1 block">Maintenant</span>
+            <p class="text-white text-sm">${escapeHtml(message)}</p>
+            <span class="text-xs text-white mt-1 block">Maintenant</span>
         </div>
     `;
     
@@ -218,28 +218,28 @@ function hideTypingIndicator() {
 function generateBotResponse(userMessage) {
     const responses = {
         'rendement': [
-            "Pour améliorer votre rendement de riz, je recommande d'optimiser l'irrigation, d'utiliser des variétés adaptées au climat malgache, et d'appliquer une fertilisation équilibrée. Le rendement moyen à Madagascar est de 3.05 t/ha, mais peut atteindre 6-8 t/ha avec de bonnes pratiques.",
-            "L'amélioration du rendement passe par plusieurs facteurs : choix des semences, gestion de l'eau, fertilisation NPK équilibrée, et lutte contre les maladies. Consultez les données météo locales pour optimiser vos interventions."
+            "Mba hampitomboana ny vokatra vary dia manoro hevitra aho ny hanatsarana ny rafitra famafazana rano (irrigation), ny hampiasana karazana vary mifanaraka amin’ny toetrandro eto Madagasikara, ary ny hanatanterahana famokarana zezika voalanjalanja. Ny vokatra antonony eto Madagasikara dia 3,05 t/ha, saingy mety hahatratra 6–8 t/ha raha mampiasa fomba fambolena tsara.",
+            "Ny fampitomboana ny vokatra dia miankina amin’ny antony maro: ny safidin’ny masomboly, ny fitantanana ny rano, ny fampiasana zezika NPK voalanjalanja, ary ny ady amin’ny aretina. Jereo hatrany ny toetry ny andro eo an-toerana mba hahafahanao manatsara ny asa ataonao."
         ],
         'semis': [
-            "Les meilleures périodes de semis à Madagascar varient selon les régions. Dans les Hauts Plateaux, semez de novembre à janvier. Sur la côte est, de décembre à février. Évitez les périodes de forte pluviométrie.",
-            "Le calendrier des semis dépend de votre zone géographique. Consultez les prévisions météo et préparez vos parcelles 2-3 semaines avant le semis pour une meilleure germination."
+            "Ny fotoan-dehibe indrindra amin’ny famafazana vary eto Madagasikara dia miovaova arakaraka ny faritra. Any amin’ny Faritra Avaratra-Andrefana (Hauts Plateaux), ny fotoana tsara indrindra dia manomboka amin’ny volana Novambra ka hatramin’ny Janoary. Any amin’ny morontsiraka atsinanana kosa dia manomboka amin’ny volana Desambra ka hatramin’ny Febroary. Aza mifidy fotoana ahitana rotsakorana be loatra.",
+            "Miankina amin’ny faritra misy anao ny fandaharam-potoanan’ny famafazana. Jereo ny vinavinan’ny toetry ny andro, ary amboary mialoha 2–3 herinandro ny tanimbary mba hahazoana fitrebona tsara ny voa."
         ],
         'irrigation': [
-            "Pour l'irrigation du riz, maintenez une hauteur d'eau de 5-10 cm pendant la croissance végétative. Réduisez l'eau 2 semaines avant la récolte. L'irrigation par aspersion est plus efficace que l'inondation continue.",
-            "Gérez l'irrigation selon les stades : 2-3 cm après repiquage, 5-10 cm pendant la croissance, et assèchement progressif avant récolte. Surveillez l'évapotranspiration locale."
+            "Ho an’ny famafazana rano amin’ny vary, tazomy eo anelanelan’ny 5–10 sm ny haavon’ny rano mandritra ny fitomboan’ny zavamaniry. Ahenao ny rano 2 herinandro alohan’ny fijinjana. Mahomby kokoa ny famafazana rano amin’ny alalan’ny fanaparitahana (aspersion) noho ny fitazonana rano mandavantaona (inondation continue).",
+            "Tantano araka ny dingana ny famafazana rano: 2–3 sm aorian’ny famindram-boaloboka, 5–10 sm mandritra ny fitomboana, ary avela hihintsana tsikelikely ny rano alohan’ny fijinjana. Araho maso koa ny fahaverezan-drano amin’ny alalan’ny etona sy ny fitrohana (evapotranspiration) eo an-toerana."
         ],
         'engrais': [
-            "Pour le riz, utilisez un engrais NPK 15-15-15 à la plantation, puis un engrais azoté (urée) en 2-3 apports. Dose recommandée : 100-150 kg/ha d'NPK + 50-80 kg/ha d'urée.",
-            "La fertilisation du riz nécessite un apport équilibré. Appliquez 60% de l'azote à la plantation, 30% au tallage, et 10% à l'épiaison. Surveillez les carences en phosphore et potassium."
+            "Ho an’ny vary, ampiasao zezika NPK 15-15-15 rehefa mamafy na mananika. Avy eo ampio zezika misy azota (urée) amin’ny fizarana 2–3. Ny fatra soso-kevitra dia 100–150 kg/ha ho an’ny NPK ary 50–80 kg/ha ho an’ny urée.",
+            "Ny zezika ho an’ny vary dia mila fandanjalanjana tsara. Omeo 60% ny azota amin’ny famafazana, 30% amin’ny fitrebona (tallage), ary 10% amin’ny fotoanan’ny fivoahan’ny voninkazo (épiaison). Araho maso koa sao misy tsy fahampian’ny fosfora sy potasioma."
         ],
         'maladie': [
-            "Les principales maladies du riz à Madagascar sont la pyriculariose, l'helminthosporiose et la bactériose. Utilisez des variétés résistantes et des fongicides préventifs. Surveillez l'hygrométrie.",
-            "Pour lutter contre les maladies, pratiquez la rotation des cultures, évitez l'excès d'azote, et traitez préventivement avec des fongicides systémiques. Consultez un agronome local."
+            "Ny aretina lehibe amin’ny vary eto Madagasikara dia ny pyriculariose, ny helminthosporiose, ary ny bactériose. Ampiasao karazana vary mahatohitra aretina ary mampiasà fanafody manohitra holatra (fongicides) mialoha. Araho maso ihany koa ny hamandoana (hygrométrie).",
+            "Mba hiadiana amin’ny aretina, manao fihodinana fambolena (rotation des cultures), aza be loatra ny azota, ary asio fanafody manohitra holatra (fongicides systémiques) mialoha. Miresaha amin’ny mpamboly na agronoma eo an-toerana."
         ],
         'prix': [
-            "Les prix du riz varient selon la qualité et la saison. Le riz de qualité supérieure se vend 2000-3000 Ar/kg, le riz standard 1500-2000 Ar/kg. Surveillez les marchés locaux et régionaux.",
-            "Pour optimiser vos revenus, diversifiez vos variétés, améliorez la qualité post-récolte, et explorez les circuits de commercialisation directs. Le riz parfumé a une meilleure valeur ajoutée."
+            "Miovaova arakaraka ny kalitao sy ny vanim-potoana ny vidin’ny vary. Ny vary tsara kalitao dia amidy 2 000–3 000 Ar/kg, ary ny vary mahazatra 1 500–2 000 Ar/kg. Araho maso ny tsena eo an-toerana sy ny faritra.",
+            "Mba hampitomboana ny vola miditra, ampiasao karazana vary samihafa, hatsaraina ny kalitaon’ny vary aorian’ny fijinjana, ary diniho ny fivarotana mivantana. Ny vary misy hanitra (riz parfumé) dia mitondra tombony lehibe kokoa."
         ]
     };
     
@@ -254,9 +254,9 @@ function generateBotResponse(userMessage) {
     
     // Réponse par défaut
     const defaultResponses = [
-        "Je comprends votre question sur la riziculture. Pouvez-vous être plus spécifique ? Je peux vous aider avec les semis, l'irrigation, la fertilisation, les maladies, ou l'amélioration des rendements.",
-        "Excellente question ! Pour vous donner la meilleure réponse, précisez votre zone géographique et le stade de votre culture. Je suis spécialisé dans l'agriculture malgache.",
-        "Je suis là pour vous accompagner dans votre projet rizicole. N'hésitez pas à me poser des questions sur les techniques culturales, la gestion des intrants, ou l'optimisation de vos rendements."
+        "Azoko ny fanontanianao momba ny fambolena vary. Azonao ve ny manazava bebe kokoa? Afaka manampy anao aho momba ny famafazana, ny famatsian-drano, ny zezika, ny aretina, na ny fanatsarana ny vokatra.",
+        "Fanontaniana tsara! Mba hahazoako manome valiny tsara indrindra dia lazao ny faritra misy anao sy ny dingan’ny fambolena misy anao. Manam-pahaizana manokana momba ny fambolena eto Madagasikara aho.",
+        "Eto aho hanampy anao amin’ny tetikasa fambolena vary ataonao. Aza misalasala manontany momba ny teknikan’ny fambolena, ny fitantanana ny akora ilaina, na ny fanatsarana ny vokatra."
     ];
     
     return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];

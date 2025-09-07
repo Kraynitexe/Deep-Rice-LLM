@@ -11,8 +11,8 @@
                     <i class="fas fa-robot text-green-600 text-xl"></i>
                 </div>
                 <div>
-                    <h3 class="text-white font-semibold text-lg">Assistant IA Riziculture</h3>
-                    <p class="text-green-100 text-sm">Spécialisé dans l'agriculture malgache</p>
+                    <h3 class="text-white font-semibold text-lg">Mpanampy IA ho an’ny fambolena vary</h3>
+                    <p class="text-green-100 text-sm">Manam-pahaizana manokana momba ny fambolena eto Madagasikara</p>
                 </div>
                 <div class="ml-auto">
                     <div class="flex space-x-2">
@@ -32,38 +32,38 @@
                     <i class="fas fa-robot text-white text-sm"></i>
                 </div>
                 <div class="bg-white rounded-lg p-4 shadow-sm max-w-xs">
-                    <p class="text-gray-800">Bonjour ! Je suis votre assistant IA spécialisé en riziculture à Madagascar. Comment puis-je vous aider aujourd'hui ?</p>
-                    <span class="text-xs text-gray-500 mt-1 block">Maintenant</span>
+                    <p class="text-gray-800">Salama! Izaho no mpanampy IA manam-pahaizana manokana momba ny fambolena vary eto Madagasikara. Ahoana no ahafahako manampy anao androany?</p>
+                    <span class="text-xs text-gray-500 mt-1 block">Ankehitriny</span>
                 </div>
             </div>
 
             <!-- Suggestions rapides -->
             <div class="flex flex-wrap gap-2 mt-4">
-                <button class="suggestion-btn bg-green-100 hover:bg-green-200 text-green-700 px-3 py-1 rounded-full text-sm transition-colors" data-suggestion="Comment améliorer mon rendement de riz ?">
+                <button class="suggestion-btn bg-green-100 hover:bg-green-200 text-green-700 px-3 py-1 rounded-full text-sm transition-colors" data-suggestion="Ahoana no hanatsarana ny vokatra vary-ko?">
                     <i class="fas fa-chart-line mr-1"></i>
-                    Améliorer le rendement
+                    Hampitomboana ny vokatra
                 </button>
-                <button class="suggestion-btn bg-blue-100 hover:bg-blue-200 text-blue-700 px-3 py-1 rounded-full text-sm transition-colors" data-suggestion="Quels sont les meilleurs moments pour semer ?">
+                <button class="suggestion-btn bg-blue-100 hover:bg-blue-200 text-blue-700 px-3 py-1 rounded-full text-sm transition-colors" data-suggestion="Rahoviana no fotoana tsara indrindra amin’ny famafazana?">
                     <i class="fas fa-calendar-alt mr-1"></i>
-                    Calendrier des semis
+                    Fandaharam-potoanan’ny famafazana
                 </button>
-                <button class="suggestion-btn bg-purple-100 hover:bg-purple-200 text-purple-700 px-3 py-1 rounded-full text-sm transition-colors" data-suggestion="Comment gérer l'irrigation de mes rizières ?">
+                <button class="suggestion-btn bg-purple-100 hover:bg-purple-200 text-purple-700 px-3 py-1 rounded-full text-sm transition-colors" data-suggestion="Ahoana no fitantanana ny famatsian-drano amin’ny tanimbary-ko?">
                     <i class="fas fa-tint mr-1"></i>
-                    Gestion irrigation
+                    Fitantanana ny famatsian-drano
                 </button>
-                <button class="suggestion-btn bg-orange-100 hover:bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-sm transition-colors" data-suggestion="Quels engrais utiliser pour le riz ?">
+                <button class="suggestion-btn bg-orange-100 hover:bg-orange-200 text-orange-700 px-3 py-1 rounded-full text-sm transition-colors" data-suggestion="Inona avy ny zezika tokony hampiasaina amin’ny vary?">
                     <i class="fas fa-seedling mr-1"></i>
-                    Fertilisation
+                    Fampiasana zezika
                 </button>
                 <?php if (isset($_SESSION['user_id'])): ?>
                     <a href="expert-request.php" class="suggestion-btn bg-red-100 hover:bg-red-200 text-red-700 px-3 py-1 rounded-full text-sm transition-colors">
                         <i class="fas fa-user-tie mr-1"></i>
-                        Demander un expert
+                        Mangataka mpanolotsaina
                     </a>
                 <?php else: ?>
                     <a href="../auth/login.php" class="suggestion-btn bg-red-100 hover:bg-red-200 text-red-700 px-3 py-1 rounded-full text-sm transition-colors">
                         <i class="fas fa-user-tie mr-1"></i>
-                        Demander un expert
+                        Mangataka manampahaizana
                     </a>
                 <?php endif; ?>
             </div>
@@ -76,7 +76,7 @@
                     <input 
                         type="text" 
                         id="chat-input" 
-                        placeholder="Posez votre question sur la riziculture..." 
+                        placeholder="Apetraho ny fanontanianao momba ny fambolena vary..." 
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
                         autocomplete="off"
                     >
@@ -90,7 +90,7 @@
                     class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
                 >
                     <i class="fas fa-paper-plane"></i>
-                    <span class="hidden sm:inline">Envoyer</span>
+                    <span class="hidden sm:inline">Alefa</span>
                 </button>
             </form>
             
@@ -100,7 +100,7 @@
                     <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
                         <i class="fas fa-robot text-white text-xs"></i>
                     </div>
-                    <span class="text-sm">L'assistant tape...</span>
+                    <span class="text-sm">Eo ampanoratana...</span>
                     <div class="flex space-x-1">
                         <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                         <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.1s;"></div>
@@ -119,7 +119,7 @@
                     <i class="fas fa-chart-bar text-green-600"></i>
                 </div>
                 <div>
-                    <p class="text-sm text-gray-600">Rendement moyen</p>
+                    <p class="text-sm text-gray-600">Vokatra antonony</p>
                     <p class="text-lg font-semibold text-gray-900">3.05 t/ha</p>
                 </div>
             </div>
@@ -131,7 +131,7 @@
                     <i class="fas fa-globe text-blue-600"></i>
                 </div>
                 <div>
-                    <p class="text-sm text-gray-600">Production Madagascar</p>
+                    <p class="text-sm text-gray-600">Fambolena eto Madagasikara</p>
                     <p class="text-lg font-semibold text-gray-900">5.12 Mt</p>
                 </div>
             </div>
@@ -143,7 +143,7 @@
                     <i class="fas fa-robot text-purple-600"></i>
                 </div>
                 <div>
-                    <p class="text-sm text-gray-600">Conseils IA</p>
+                    <p class="text-sm text-gray-600">Torohevitra avy amin’ny IA</p>
                     <p class="text-lg font-semibold text-gray-900">24/7</p>
                 </div>
             </div>

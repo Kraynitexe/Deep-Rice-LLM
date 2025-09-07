@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Assistant IA spécialisé en riziculture malgache. Conseils personnalisés pour améliorer vos rendements et optimiser votre production de riz.">
+    <meta name="description" content="Mpanampy IA manokana amin’ny fambolena vary eto Madagasikara. Manome torohevitra manokana hampitomboana ny vokatrao sy hanatsarana ny famokarana vary.">
     <title>Deep Rice Madagascar</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -72,11 +72,11 @@
         
         /* Styles pour les messages de chat */
         .chat-message {
-            color: #374151;
+            color: #ffffffff;
         }
         
         .chat-message p {
-            color: #374151;
+            color: #ffffffff;
         }
         
         /* Assurer la visibilité des boutons */
@@ -118,7 +118,7 @@
         
         .chat-messages .bg-white {
             background-color: white !important;
-            color: #374151 !important;
+            color: #ffffffff !important;
         }
         
         .chat-messages .bg-green-600 {
@@ -127,11 +127,11 @@
         }
         
         .chat-messages .text-gray-800 {
-            color: #1f2937 !important;
+            color: #ffffffff !important;
         }
         
         .chat-messages .text-gray-500 {
-            color: #6b7280 !important;
+            color: #ffffffff !important;
         }
         
         .chat-messages .text-green-100 {
@@ -198,7 +198,7 @@
                 </div>
                 
                 <h2 class="text-2xl md:text-3xl font-semibold text-gray-700 mb-4">
-                    Assistant IA Riziculture
+                    Mpanampy IA ho an’ny fambolena vary
                 </h2>
                 
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">

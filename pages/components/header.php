@@ -13,6 +13,9 @@
             <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                     <a href="../index.html#accueil" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Accueil</a>
+                    <a href="../index.html#donnees" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Données</a>
+                    <a href="../index.html#graphiques" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Graphiques</a>
+                    <a href="../index.html#faq" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">FAQ</a>
                     <a href="chat.php" class="text-green-600 font-semibold px-3 py-2 rounded-md text-sm font-medium transition-colors">Chat IA</a>
                     
                     <?php if (isset($_SESSION['user_id'])): ?>

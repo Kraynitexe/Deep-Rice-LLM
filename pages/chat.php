@@ -118,7 +118,7 @@
         
         .chat-messages .bg-white {
             background-color: white !important;
-            color: #374151 !important;
+            color: #ffffffff !important;
         }
         
         .chat-messages .bg-green-600 {
@@ -127,11 +127,11 @@
         }
         
         .chat-messages .text-gray-800 {
-            color: #1f2937 !important;
+            color: #ffffffff !important;
         }
         
         .chat-messages .text-gray-500 {
-            color: #6b7280 !important;
+            color: #ffffffff !important;
         }
         
         .chat-messages .text-green-100 {

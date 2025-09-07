@@ -39,11 +39,11 @@
                         </div>
                     <?php else: ?>
                         <!-- Menu non connecté -->
-                        <a href="../auth/login.php" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                            <i class="fas fa-sign-in-alt mr-1"></i>Connexion
+                        <a href="../auth/login.php" class="btn-primary bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                           Connexion
                         </a>
-                        <a href="../auth/register.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
-                            <i class="fas fa-user-plus mr-1"></i>Inscription
+                        <a href="../auth/register.php" class="bg-white hover:bg-blue-100 text-blue-600 border border-blue-600 px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                            <i class="fas text-blue-600 fa-user-plus mr-1"></i>Inscription
                         </a>
                     <?php endif; ?>
                 </div>
